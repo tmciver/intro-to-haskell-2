@@ -11,6 +11,7 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.0.2/dist/theme/night.css" id="theme"/>
 
+<link rel="stylesheet" href="./css/style.css"/>
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -30,13 +31,13 @@
 </section>
 
 <section>
-<section id="slide-orgeed3a4d">
-<h2 id="orgeed3a4d">First, Something Familiar</h2>
-<div class="outline-text-2" id="text-orgeed3a4d">
+<section id="slide-orgbe4de1e">
+<h2 id="orgbe4de1e">First, Something Familiar</h2>
+<div class="outline-text-2" id="text-orgbe4de1e">
 </div>
 </section>
-<section id="slide-orgb24b88c">
-<h3 id="orgb24b88c">FizzBuzz</h3>
+<section id="slide-orgff7585b">
+<h3 id="orgff7585b">FizzBuzz</h3>
 <blockquote >
 <p>
 Write a program that prints the numbers from 1 to 100. But for multiples of
@@ -46,8 +47,10 @@ three print “Fizz” instead of the number and for the multiples of five print
 </blockquote>
 
 </section>
-<section id="slide-org3897e7d">
-<h3 id="org3897e7d">In C#</h3>
+<section id="slide-org62e32e0">
+<h3 id="org62e32e0">In C#</h3>
+<div class='two-col-container'>
+  <div class='left-col'>
 <div class="org-src-container">
 
 <pre  class="src src-csharp"><code trim><span style="color: #b4fa70;">using</span> <span style="color: #e9b2e3;">System</span>;
@@ -68,6 +71,25 @@ three print “Fizz” instead of the number and for the multiples of five print
     }
 }
 </code></pre>
+</div>
+
+</div>
+<div class='right-col fragment fade-in'>
+
+<div class="org-src-container">
+
+<pre  class="src src-haskell"><code trim><span style="color: #fce94f;">main</span> <span style="color: #fcaf3e;">=</span> putStr (unlines (map fizzBuzz [1<span style="color: #fcaf3e;">..</span>100]))
+  <span style="color: #b4fa70;">where</span> fizzBuzz i <span style="color: #fcaf3e;">=</span> <span style="color: #b4fa70;">if</span> i <span style="color: #fcaf3e;">`mod`</span> 3 <span style="color: #fcaf3e;">==</span> 0 <span style="color: #fcaf3e;">&amp;&amp;</span> i <span style="color: #fcaf3e;">`mod`</span> 5 <span style="color: #fcaf3e;">==</span> 0
+                     <span style="color: #b4fa70;">then</span> <span style="color: #e9b96e;">"FizzBuzz"</span>
+                     <span style="color: #b4fa70;">else</span> <span style="color: #b4fa70;">if</span> i <span style="color: #fcaf3e;">`mod`</span> 3 <span style="color: #fcaf3e;">==</span> 0
+                          <span style="color: #b4fa70;">then</span> <span style="color: #e9b96e;">"Fizz"</span>
+                          <span style="color: #b4fa70;">else</span> <span style="color: #b4fa70;">if</span> i <span style="color: #fcaf3e;">`mod`</span> 5 <span style="color: #fcaf3e;">==</span> 0
+                               <span style="color: #b4fa70;">then</span> <span style="color: #e9b96e;">"Buzz"</span>
+                               <span style="color: #b4fa70;">else</span> show i
+</code></pre>
+</div>
+
+  </div>
 </div>
 </section>
 </section>

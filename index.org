@@ -2,6 +2,8 @@
 #+REVEAL_THEME: night
 #+OPTIONS: toc:nil, num:nil, timestamp:nil
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js@4.0.2
+#+REVEAL_EXTRA_CSS: ./css/style.css
+#+OPTIONS: reveal_width:1200 reveal_height:800
 
 * First, Something Familiar
 
@@ -13,6 +15,11 @@ three print “Fizz” instead of the number and for the multiples of five print
 #+END_QUOTE
 
 ** In C#
+
+#+BEGIN_EXPORT html
+<div class='two-col-container'>
+  <div class='left-col'>
+#+END_EXPORT
 #+BEGIN_SRC csharp
 using System;
 
@@ -32,3 +39,24 @@ public class FizzBuzz {
     }
 }
 #+END_SRC
+
+#+BEGIN_EXPORT html
+  </div>
+  <div class='right-col fragment fade-in'>
+#+END_EXPORT
+
+#+BEGIN_SRC haskell
+main = putStr (unlines (map fizzBuzz [1..100]))
+  where fizzBuzz i = if i `mod` 3 == 0 && i `mod` 5 == 0
+                     then "FizzBuzz"
+		     else if i `mod` 3 == 0
+                          then "Fizz"
+			  else if i `mod` 5 == 0
+                               then "Buzz"
+                               else show i
+#+END_SRC
+
+#+BEGIN_EXPORT html
+  </div>
+</div>
+#+END_EXPORT

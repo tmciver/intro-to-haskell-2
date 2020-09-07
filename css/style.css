@@ -1,0 +1,16 @@
+.two-col-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+div.slides {
+  width: 100%;
+}
+
+.reveal pre {
+  width: 100%;
+}
+
+.reveal pre code {
+  max-height: none; /* Get rid of the 400px max-heigth from Reveal
+}
