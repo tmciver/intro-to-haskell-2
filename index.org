@@ -14,11 +14,12 @@ three print “Fizz” instead of the number and for the multiples of five print
 “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.
 #+END_QUOTE
 
-** In C#
+** The Code
 
 #+BEGIN_EXPORT html
 <div class='two-col-container'>
   <div class='left-col'>
+  <p>C#</p>
 #+END_EXPORT
 #+BEGIN_SRC csharp
 using System;
@@ -43,6 +44,7 @@ public class FizzBuzz {
 #+BEGIN_EXPORT html
   </div>
   <div class='right-col fragment fade-in'>
+  <p>Haskell</p>
 #+END_EXPORT
 
 #+BEGIN_SRC haskell
