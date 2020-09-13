@@ -1,18 +1,26 @@
 using System;
-using System.Windows.Forms;
+using System.Linq;
 
 public class FizzBuzz {
     static public void Main () {
-        for (int i = 1; i <= 100; i++) {
-	    if (i % 3 == 0 && i % 5 == 0) {
-		Console.WriteLine("FizzBuzz");
-	    } else if (i % 3 == 0) {
-		Console.WriteLine("Fizz");
-	    } else if (i % 5 == 0) {
-		Console.WriteLine("Buzz");
-	    } else {
-		Console.WriteLine(i);
-	    }
-	}
+
+	string[] fizzBuzzStrings = Enumerable
+	    .Range(1, 100)
+	    .Select(i => {
+		if (i % 3 == 0 && i % 5 == 0) {
+		    return "FizzBuzz";
+		} else if (i % 3 == 0) {
+		    return "Fizz";
+		} else if (i % 5 == 0) {
+		    return "Buzz";
+		} else {
+		    return i.ToString();
+		}
+	    })
+	    .ToArray();
+
+	string fizzBuzz = string.Join("\n", fizzBuzzStrings);
+
+	Console.WriteLine(fizzBuzz);
     }
 }
