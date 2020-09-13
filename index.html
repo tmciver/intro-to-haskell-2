@@ -31,13 +31,13 @@
 </section>
 
 <section>
-<section id="slide-org45ce8c8">
-<h2 id="org45ce8c8">First, Something Familiar</h2>
-<div class="outline-text-2" id="text-org45ce8c8">
+<section id="slide-orge8949c6">
+<h2 id="orge8949c6">First, Something Familiar</h2>
+<div class="outline-text-2" id="text-orge8949c6">
 </div>
 </section>
-<section id="slide-orga0626c1">
-<h3 id="orga0626c1">FizzBuzz</h3>
+<section id="slide-orga3c983d">
+<h3 id="orga3c983d">FizzBuzz</h3>
 <blockquote >
 <p>
 Write a program that prints the numbers from 1 to 100. But for multiples of
@@ -47,8 +47,8 @@ three print “Fizz” instead of the number and for the multiples of five print
 </blockquote>
 
 </section>
-<section id="slide-org09d3e63">
-<h3 id="org09d3e63">The Code</h3>
+<section id="slide-org6989d1d">
+<h3 id="org6989d1d">The Code</h3>
 <div class='two-col-container'>
   <div class='left-col'>
   <p>C#</p>
@@ -76,6 +76,63 @@ three print “Fizz” instead of the number and for the multiples of five print
 
 </div>
 <div class='right-col fragment fade-in'>
+<p>Haskell</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-haskell"><code trim><span style="color: #fce94f;">main</span> <span style="color: #fcaf3e;">=</span> putStr (unlines (map fizzBuzz [1<span style="color: #fcaf3e;">..</span>100]))
+  <span style="color: #b4fa70;">where</span> fizzBuzz i <span style="color: #fcaf3e;">=</span> <span style="color: #b4fa70;">if</span> i <span style="color: #fcaf3e;">`mod`</span> 3 <span style="color: #fcaf3e;">==</span> 0 <span style="color: #fcaf3e;">&amp;&amp;</span> i <span style="color: #fcaf3e;">`mod`</span> 5 <span style="color: #fcaf3e;">==</span> 0
+                     <span style="color: #b4fa70;">then</span> <span style="color: #e9b96e;">"FizzBuzz"</span>
+                     <span style="color: #b4fa70;">else</span> <span style="color: #b4fa70;">if</span> i <span style="color: #fcaf3e;">`mod`</span> 3 <span style="color: #fcaf3e;">==</span> 0
+                          <span style="color: #b4fa70;">then</span> <span style="color: #e9b96e;">"Fizz"</span>
+                          <span style="color: #b4fa70;">else</span> <span style="color: #b4fa70;">if</span> i <span style="color: #fcaf3e;">`mod`</span> 5 <span style="color: #fcaf3e;">==</span> 0
+                               <span style="color: #b4fa70;">then</span> <span style="color: #e9b96e;">"Buzz"</span>
+                               <span style="color: #b4fa70;">else</span> show i
+</code></pre>
+</div>
+
+  </div>
+</div>
+
+</section>
+<section id="slide-org4a071aa">
+<h3 id="org4a071aa">The Code</h3>
+<div class='two-col-container'>
+  <div class='left-col'>
+  <p>C#</p>
+<div class="org-src-container">
+
+<pre  class="src src-csharp"><code trim><span style="color: #b4fa70;">using</span> <span style="color: #e9b2e3;">System</span>;
+<span style="color: #b4fa70;">using</span> <span style="color: #e9b2e3;">System.Linq</span>;
+
+<span style="color: #b4fa70;">public</span> <span style="color: #b4fa70;">class</span> <span style="color: #8cc4ff;">FizzBuzz</span> {
+    <span style="color: #b4fa70;">static</span> <span style="color: #b4fa70;">public</span> <span style="color: #8cc4ff;">void</span> <span style="color: #fce94f;">Main</span> () {
+
+        <span style="color: #8cc4ff;">string</span>[] <span style="color: #fcaf3e;">fizzBuzzStrings</span> = Enumerable
+            .<span style="color: #fce94f;">Range</span>(1, 100)
+            .<span style="color: #fce94f;">Select</span>(i =&gt; {
+                <span style="color: #b4fa70;">if</span> (i % 3 == 0 &amp;&amp; i % 5 == 0) {
+                    <span style="color: #b4fa70;">return</span> <span style="color: #e9b96e;">"FizzBuzz"</span>;
+                } <span style="color: #b4fa70;">else</span> <span style="color: #b4fa70;">if</span> (i % 3 == 0) {
+                    <span style="color: #b4fa70;">return</span> <span style="color: #e9b96e;">"Fizz"</span>;
+                } <span style="color: #b4fa70;">else</span> <span style="color: #b4fa70;">if</span> (i % 5 == 0) {
+                    <span style="color: #b4fa70;">return</span> <span style="color: #e9b96e;">"Buzz"</span>;
+                } <span style="color: #b4fa70;">else</span> {
+                    <span style="color: #b4fa70;">return</span> i.<span style="color: #fce94f;">ToString</span>();
+                }
+            })
+            .<span style="color: #fce94f;">ToArray</span>();
+
+        <span style="color: #8cc4ff;">string</span> <span style="color: #fcaf3e;">fizzBuzz</span> = <span style="color: #8cc4ff;">string</span>.<span style="color: #fce94f;">Join</span>(<span style="color: #e9b96e;">"\n"</span>, <span style="color: #8cc4ff;">fizzBuzzStrings</span>);
+
+        Console.<span style="color: #fce94f;">WriteLine</span>(<span style="color: #8cc4ff;">fizzBuzz</span>);
+    }
+}
+</code></pre>
+</div>
+
+</div>
+<div class='right-col'>
 <p>Haskell</p>
 
 <div class="org-src-container">
